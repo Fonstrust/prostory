@@ -3,265 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЖК "Название комплекса!"</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Общие стили */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .wrapper {
-            overflow-x: hidden;
-        }
-
-        /* Стили шапки */
-        .header {
-            background: #126177;
-            padding: 20px 0;
-            position: relative;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: #fff;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover {
-            color: #fb744e;
-        }
-
-        /* Стили первого блока */
-        .hero {
-            background: url('pk_mbg.jpg') no-repeat center center/cover;
-            height: 100vh;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-title {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero-subtitle {
-            font-size: 24px;
-            opacity: 0.8;
-            margin-bottom: 40px;
-        }
-
-        .hero-btn {
-            background: #fb744e;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .hero-btn:hover {
-            background: #d65a36;
-        }
-
-        /* Адаптивные стили */
-        @media (max-width: 768px) {
-            .header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: 10px;
-                margin-top: 20px;
-            }
-
-            .hero-title {
-                font-size: 36px;
-            }
-
-            .hero-subtitle {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <title>Жилой комплекс "Название"</title>
+    <!-- Подключаемые файлы будут добавлены здесь -->
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Шапка сайта -->
-        <header class="header">
-            <div class="container">
-                <a href="#" class="logo"><img src="pk_logo.svg" alt="logo"></a>
-                <nav class="nav">
-                    <a href="#home">Главная</a>
-                    <a href="#about">О проекте</a>
-                    <a href="#gallery">Галерея</a>
-                    <a href="#plans">Планы квартир</a>
-                    <a href="#contacts">Контакты</a>
-                   </nav>
+<!-- Шапка сайта -->
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Логотип">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul class="nav">
+                <li class="nav__item"><a href="#about" class="nav__link">О комплексе</a></li>
+                <li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
+                <li class="nav__item"><a href="#location" class="nav__link">Расположение</a></li>
+                <li class="nav__item"><a href="#layouts" class="nav__link">Планировки</a></li>
+                <li class="nav__item"><a href="#purchase" class="nav__link">Способы покупки</a></li>
+                <li class="nav__item"><a href="#houses" class="nav__link">О домах</a></li>
+                <li class="nav__item"><a href="#jobs" class="nav__link">Вакансии</a></li>
+                <li class="nav__item"><a href="#news" class="nav__link">Новости</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Основной контент -->
+<main class="main">
+    <!-- Блок "О комплексе" -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О комплексе</h2>
+            <div class="about__content">
+                <p>Текст о комплексе</p>
             </div>
-       </header>
-                   
-                   <!-- Первый блок -->
-                   <section class="hero" id="home">
-                    <div class="hero-content">
-                    <h1 class="hero-title">ЖК "Название комплекса"</h1>
-                    <p class="hero-subtitle">Ваш новый уровень жизни</p>
-                    <a href="#about" class="hero-btn">Узнать подробнее</a>
-                    </div>
-                   </section>
-                   
-                   <!-- О проекте -->
-                   <section class="section" id="about">
-                    <div class="container">
-                    <div class="about-content">
-                    <div class="about-text">
-                    <h2 class="section-title">О проекте</h2>
-                    <p class="section-desc">
-                    Современный жилой комплекс, расположенный в живописном районе города. 
-                    Мы создали пространство, где комфорт встречается с инновациями.
-                    </p>
-                    <ul class="project-features">
-                    <li>• Современные планировки</li>
-                    <li>• Развитая инфраструктура</li>
-                    <li>• Закрытая территория</li>
-                    <li>• Подземный паркинг</li>
-                    <li>• Ландшафтный дизайн</li>
-                    </ul>
-                    </div>
-                    <div class="about-image">
-                    <img src="project-image.jpg" alt="Проект ЖК">
-                    </div>
-                    </div>
-                    </div>
-                   </section>
-                   
-                   <!-- Стили для секции "О проекте" -->
-                   <style>
-                   .section {
-                    padding: 80px 0;
-                    }
-                   
-                   .container {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    padding: 0 15px;
-                    }
-                   
-                   .about-content {
-                    display: flex;
-                    gap: 50px;
-                    align-items: center;
-                    }
-                   
-                   .section-title {
-                    font-size: 36px;
-                    margin-bottom: 20px;
-                    color: #126177;
-                    }
-                   
-                   .section-desc {
-                    font-size: 18px;
-                    color: #666;
-                    margin-bottom: 30px;
-                    }
-                   
-                   .project-features {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    }
-                   
-                   .project-features li {
-                    position: relative;
-                    padding-left: 20px;
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                    color: #333;
-                    }
-                   
-                   .project-features li::before {
-                    content: "✓";
-                    position: absolute;
-                    left: 0;
-                    color: #fb744e;
-                    }
-                   
-                   .about-image img {
-                    max-width: 100%;
-                    border-radius: 10px;
-                    }
-                   
-                   /* Адаптивные стили */
-                   @media (max-width: 768px) {
-                    .about-content {
-                    flex-direction: column;
-                    }
-                   
-                   .section-title {
-                    font-size: 30px;
-                    }
-                   
-                   .section-desc {
-                    font-size: 16px;
-                    }
-                   
-                   .project-features li {
-                    font-size: 14px;
-                    }
-                   }
-                   </style>
-                   </div>
-                   </body>
-                   </html>
+        </div>
+    </section>
+
+    <!-- Блок "Галерея" -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Галерея</h2>
+            <div class="gallery__content">
+                <!-- Здесь будет галерея -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Расположение" -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2 class="section-title">Расположение</h2>
+            <div class="location__content">
+                <!-- Здесь будет карта -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Планировки" -->
+    <section class="layouts" id="layouts">
+        <div class="container">
+            <h2 class="section-title">Планировки</h2>
+            <div class="layouts__content">
+                <!-- Здесь будут планировки -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Способы покупки" -->
+    <section class="purchase" id="purchase">
+        <div class="container">
+            <h2 class="section-title">Способы покупки</h2>
+            <div class="purchase__content">
+                <!-- Здесь будет информация о способах покупки -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "О домах" -->
+    <section class="houses" id="houses">
+        <div class="container">
+            <h2 class="section-title">О домах</h2>
+            <div class="houses__content">
+                <!-- Здесь будет информация о домах -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Вакансии" -->
+    <section class="jobs" id="jobs">
+        <div class="container">
+            <h2 class="section-title">Вакансии</h2>
+            <div class="jobs__content">
+                <!-- Здесь будет информация о вакансиях -->
+            </div>
+        </div>
+    </section>
+    <!-- Блок "Новости" -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title">Новости</h2>
+            <div class="news__content">
+                <!-- Здесь будет лента новостей -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <a href="#" class="logo">
+                        <img src="img/logo-footer.png" alt="Логотип">
+                    </a>
+                </div>
+                <div class="footer__contacts">
+                    <p>Адрес: [Адрес]</p>
+                    <p>Телефон: [Телефон]</p>
+                    <p>Email: [Email]</p>
+                </div>
+                <div class="footer__social">
+                    <!-- Здесь будут иконки социальных сетей -->
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2025 [Название компании]. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна и попапы -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <!-- Контент модального окна -->
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="js/main.js"></script>
+</main>
+</body>
+</html>
