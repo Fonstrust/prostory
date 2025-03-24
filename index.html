@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЖК "Название комплекса"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .wrapper {
+            overflow-x: hidden;
+        }
+
+        /* Стили шапки */
+        .header {
+            background: #126177;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #fb744e;
+        }
+
+        /* Стили первого блока */
+        .hero {
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        .hero-btn {
+            background: #fb744e;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #d65a36;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <div class="container">
+                <a href="#" class="logo">ЖК "Название"</a>
+                <nav class="nav">
+                    <a href="#home">Главная</a>
+                    <a href="#about">О проекте</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#plans">Планы квартир</a>
+                    <a href="#contacts">Контакты</a>
+                   </nav>
+                   </header>
+                   
+                   <!-- Первый блок -->
+                   <section class="hero" id="home">
+                    <div class="hero-content">
+                    <h1 class="hero-title">ЖК "Название комплекса"</h1>
+                    <p class="hero-subtitle">Ваш новый уровень жизни</p>
+                    <a href="#about" class="hero-btn">Узнать подробнее</a>
+                    </div>
+                   </section>
+                   
+                   <!-- О проекте -->
+                   <section class="section" id="about">
+                    <div class="container">
+                    <div class="about-content">
+                    <div class="about-text">
+                    <h2 class="section-title">О проекте</h2>
+                    <p class="section-desc">
+                    Современный жилой комплекс, расположенный в живописном районе города. 
+                    Мы создали пространство, где комфорт встречается с инновациями.
+                    </p>
+                    <ul class="project-features">
+                    <li>• Современные планировки</li>
+                    <li>• Развитая инфраструктура</li>
+                    <li>• Закрытая территория</li>
+                    <li>• Подземный паркинг</li>
+                    <li>• Ландшафтный дизайн</li>
+                    </ul>
+                    </div>
+                    <div class="about-image">
+                    <img src="project-image.jpg" alt="Проект ЖК">
+                    </div>
+                    </div>
+                    </div>
+                   </section>
+                   
+                   <!-- Стили для секции "О проекте" -->
+                   <style>
+                   .section {
+                    padding: 80px 0;
+                    }
+                   
+                   .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+                    }
+                   
+                   .about-content {
+                    display: flex;
+                    gap: 50px;
+                    align-items: center;
+                    }
+                   
+                   .section-title {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                    color: #126177;
+                    }
+                   
+                   .section-desc {
+                    font-size: 18px;
+                    color: #666;
+                    margin-bottom: 30px;
+                    }
+                   
+                   .project-features {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    }
+                   
+                   .project-features li {
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    color: #333;
+                    }
+                   
+                   .project-features li::before {
+                    content: "✓";
+                    position: absolute;
+                    left: 0;
+                    color: #fb744e;
+                    }
+                   
+                   .about-image img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    }
+                   
+                   /* Адаптивные стили */
+                   @media (max-width: 768px) {
+                    .about-content {
+                    flex-direction: column;
+                    }
+                   
+                   .section-title {
+                    font-size: 30px;
+                    }
+                   
+                   .section-desc {
+                    font-size: 16px;
+                    }
+                   
+                   .project-features li {
+                    font-size: 14px;
+                    }
+                   }
+                   </style>
+                   </div>
+                   </body>
+                   </html>
